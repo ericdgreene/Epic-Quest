@@ -1,3 +1,3 @@
 # MMOQuest
 
-MMOQuest is a HTML5/Javascript multiplayer online RPG
+Epic Quest is a multiplayer RPG written in HTML5 & Javascript.
