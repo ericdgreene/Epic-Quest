@@ -25,7 +25,7 @@ io.sockets.on('connection', function (socket) {
   });
 
   socket.on('msg', function (data) {
-    console.log('message received: ' + data.name);
+    console.log('button clicked by: ' + data.name);
   });
 
   socket.emit('serverMsg', {
