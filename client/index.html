@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Epic Quest</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+</head>
+
+<body>
+  <button onclick="sendMsg()">Send</button>
+
+  <script>
+    const socket = io();
+    socket.emit('message', {
+      game: 'Epic Quest'
+    });
+
+    socket.on('serverMsg', function (data) {
+      console.log('serverMsg: ' + data.msg);
+    });
+
+    let sendMsg = function () {
+      socket.emit('msg', {
+        name: 'Eric'
+      });
+    }
+  </script>
+  Game on ...
+</body>
+
+</html>
